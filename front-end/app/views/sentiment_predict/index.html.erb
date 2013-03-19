@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= content_for?(:title) ? yield(:title) : "Sagacity" %></title>
+<meta name="description" content="">
+<meta name="author" content="">
+<%= stylesheet_link_tag "application", :media => "all" %>
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
+<%= yield(:head) %>
+</head>
+<body>
+<header class="navbar navbar-fixed-top">
+  <nav class="navbar-inner">
+    <div class="container">
+    </div>
+  </nav>
+</header>
+<div id="main" role="main">
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div class="span12">
+          <%#<form class="simple-form form-inline" action="predict" method="post">%>
+            <div style="margin:0;padding:0;display:inline">
+              <input id="tweet_text" class="string required" type="text" name="text" placeholder="Enter Text to Determine sentiment">
+            <%#<div class="control-group string required"><div class="controls"></div></div> %>
+            <button id="generate_sentiment" type="submit" class="btn">Determine Sentiment</button>
+          </form>
+          <div id="sentiment_value" class="simple-info">
+            <div>
+        </div>
+      </div>
+      <footer>
+      </footer>
+    </div>
+  </div> <!--! end of .container -->
+</div> <!--! end of #main -->
+</body>
+</html>

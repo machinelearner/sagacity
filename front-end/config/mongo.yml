@@ -1,0 +1,18 @@
+defaults: &defaults
+  host: 127.0.0.1
+  port: 27017
+
+development:
+  <<: *defaults
+  database: sagacity_development
+
+test:
+  <<: *defaults
+  database: sagacity_test
+
+# set these environment variables on your prod server
+production:
+  <<: *defaults
+  database: sagacity
+  username: <%= ENV['MONGO_USERNAME'] %>
+  password: <%= ENV['MONGO_PASSWORD'] %>

@@ -12,29 +12,19 @@
 <%= yield(:head) %>
 </head>
 <body>
-<header class="navbar navbar-fixed-top">
-  <nav class="navbar-inner">
-    <div class="container">
-    </div>
-  </nav>
-</header>
-<div id="main" role="main">
-  <div class="container">
-    <div class="content">
-      <div class="row">
-        <div class="span12">
-          <%#<form class="simple-form form-inline" action="predict" method="post">%>
-            <div style="margin:0;padding:0;display:inline">
-              <input id="tweet_text" class="string required" type="text" name="text" placeholder="Enter Text to Determine sentiment">
-            <%#<div class="control-group string required"><div class="controls"></div></div> %>
-            <button id="generate_sentiment" type="submit" class="btn">Determine Sentiment</button>
-          </form>
-          <div id="sentiment_value" class="simple-info">
-            <div>
-        </div>
-      </div>
-      <footer>
-      </footer>
+<div class="sagacity-container">
+    <h1>Sagacity</h1>
+</div>
+<div class="predict-container">
+    <span>
+        <input id="tweet_text" class="string required" type="text" name="text" placeholder="Enter Text to Determine sentiment">
+        <button id="generate_sentiment" type="submit" class="predict-button">Determine Sentiment</button>
+    </span>
+</div>
+<div id="sentiment_value" class="predict-container">
+</div>
+<footer>
+</footer>
     </div>
   </div> <!--! end of .container -->
 </div> <!--! end of #main -->

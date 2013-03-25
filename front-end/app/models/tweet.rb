@@ -24,7 +24,9 @@ class Tweet
         return "" if stemmed_words.empty?
         feature_list = stemmed_words.map do |word|
             word_weight = DeltaTFIDF.where(:word=>word.value).first
-            {"label" => word_weight.identifier,"score" => word_weight.value}
+            identifier = if word_weight.nil? then 0 else word_weight.identifier end
+            weight = if word_weight.nil? then 0 else word_weight.value end
+            {"label" => identifier,"score" => weight}
         end
         feature_list = feature_list.sort { |a, b| a["label"]<=> b["label"]}## sort by label
         feature_vector = Hash.new(0)

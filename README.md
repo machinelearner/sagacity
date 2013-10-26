@@ -3,7 +3,7 @@ Sagacity - Sentiment Analyzer
 
 Delta TFIDF weighed,SVM based text sentiment analyzer
 
-Detailed explanation of Sagacity - https://github.com/npramod05/sagacity/wiki/Description-of-What-is-behind-Sagacity.
+Detailed explanation of Sagacity - [Wiki](https://github.com/machinelearner/sagacity/wiki/Description-of-What-is-behind-Sagacity).
 
 Back-End: Consists of pipelines/stages namely Mongo
 Seed,PrePorcessing(Includes generation of Delta-TFIDF),Training, Bulk
